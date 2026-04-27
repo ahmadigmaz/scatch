@@ -43,3 +43,22 @@ bgcolour - string
 panelcolour - string
 textcolour - string
 
+# Debugger
+
+const debugger = require('debug)(development:filename);
+
+debugger("print any value);
+
+To start command - export DEBUG=development:* or $env:DEBUG="whatever:*"
+TO stop command - export DEBUG= or $env:DEBUG=""
+
+# routes
+
+/ - signup and login 
+/shop - shop
+/users/cart  - cart
+/admin - admin panel
+/owner/product - all products
+/owner/admin - show admin panel to create products.
+
+

@@ -19,7 +19,6 @@ const userSchema = mongoose.Schema({
     contact:
         {
         type: String,
-        required: true
         },
     cart:[
         {

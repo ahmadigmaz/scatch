@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+const config = require('config');
+const debuger = require('debug')("dev:dbConnection");
 
 const db = async () =>{
    try{
-        mongoose.connect("mongodb://localhost:27017/scatch");
-        console.log("database connected");
+        mongoose.connect(`${config.get("MONGODB_URL")}/scatch`);
+        debuger("database connected");
    }catch(err){
-        console.log("DB connection error: " , err);
+        debuger("DB connection error: " , err);
         process.exit(1);
    } 
 }

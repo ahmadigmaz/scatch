@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scatch</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200">
+
+  <div class="w-full h-screen flex">
+
+    <!-- LEFT SIDE (SIGNUP) -->
+    <div class="w-1/2 bg-gray-300 flex flex-col justify-center items-center relative">
+
+      <!-- Logo -->
+      <h1 class="absolute top-6 left-8 text-xl font-semibold text-gray-700">
+        Scatch
+      </h1>
+
+      <div class="w-80">
+        <h2 class="text-2xl font-light mb-2">
+          welcome to <span class="text-blue-500 font-medium">Scatch</span>
+        </h2>
+        <p class="text-sm text-gray-600 mb-6">create your account</p>
+
+        <form action="/users/create" method="POST" class="flex flex-col gap-3">
+
+          <input 
+            type="text" 
+            name="fullname"
+            placeholder="Full Name"
+            class="px-4 py-2 rounded bg-gray-100 outline-none"
+          />
+
+          <input 
+            type="email" 
+            name="email"
+            placeholder="Email"
+            class="px-4 py-2 rounded bg-gray-100 outline-none"
+          />
+
+          <input 
+            type="password" 
+            name="password"
+            placeholder="Password"
+            class="px-4 py-2 rounded bg-gray-100 outline-none"
+          />
+
+          <button class="mt-3 bg-blue-500 text-white py-2 rounded-full">
+            Create My Account
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- CENTER OR -->
+    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="w-10 h-10 bg-blue-500 text-white flex items-center justify-center rounded-full shadow">
+        or
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE (LOGIN) -->
+    <div class="w-1/2 bg-gray-100 flex flex-col justify-center items-center">
+
+      <div class="w-80">
+        <h2 class="text-lg mb-6 text-gray-700">
+          Login your account
+        </h2>
+
+        <form action="/users/login" method="POST" class="flex flex-col gap-3">
+
+          <input 
+            type="email" 
+            name="email"
+            placeholder="Email"
+            class="px-4 py-2 rounded bg-gray-200 outline-none"
+          />
+
+          <input 
+            type="password" 
+            name="password"
+            placeholder="Password"
+            class="px-4 py-2 rounded bg-gray-200 outline-none"
+          />
+
+          <button class="mt-3 bg-blue-500 text-white py-2 rounded-full w-24">
+            Login
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

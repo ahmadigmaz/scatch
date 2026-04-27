@@ -4,6 +4,7 @@ const productSchema = mongoose.Schema({
     image:{
         type: String,
         default: "defaultProductImg.png",
+        set: value => typeof value === 'string' ? value : ''
     },
     name:{
         type: String,

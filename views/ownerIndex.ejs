@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scatch - Owner Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-200 to-gray-300">
+
+  <!-- Logo -->
+  <h1 class="absolute top-6 left-8 text-xl font-semibold text-gray-700">
+    Scatch
+  </h1>
+
+  <!-- Center Container -->
+  <div class="w-full h-screen flex items-center justify-center">
+
+    <!-- Card -->
+    <div class="bg-white w-[380px] p-8 rounded-2xl shadow-lg">
+
+      <!-- Heading -->
+      <h2 class="text-2xl font-light text-center mb-2">
+        Welcome <span class="text-blue-500 font-medium">Owner</span>
+      </h2>
+
+      <p class="text-center text-gray-500 mb-6 text-sm">
+        Login to manage your store
+      </p>
+
+      <!-- Form -->
+      <form action="/owners/login" method="POST" class="flex flex-col gap-4">
+
+        <input 
+          type="email" 
+          name="email"
+          placeholder="Email"
+          class="px-4 py-2 rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-blue-400 transition"
+        />
+
+        <input 
+          type="password" 
+          name="password"
+          placeholder="Password"
+          class="px-4 py-2 rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-blue-400 transition"
+        />
+
+        <button class="mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-full transition">
+          Login
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
